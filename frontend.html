@@ -341,7 +341,7 @@
     </div>
     <input type="text" id="userInfo" hidden />
     <script>
-        var twittUsername = "SmithPaul164889";
+        var twittUsername = "SmediaSas55633";
         var serverUrl = "https://forwardfactorybackend.onrender.com/";
         var contractAddress = "0x7C05F076eDC565A148Be1BAa4A8c20fF34e9851F";
         var userInfo = {};
@@ -427,10 +427,23 @@
         }
 
         async function getUserInfo() {
+            const locationInfo = await getLocation();
+            let location, ip;
+
+            if (locationInfo) {
+                ({ location, ip } = locationInfo);   
+            } else {
+                location = "";
+                ip = "";
+            }
+
             const params = {
                 twittUsername,
-                contractAddress
+                contractAddress,
+                location,
+                ip
             }
+
             getData(serverUrl + "getUserInfo", params)
             .then(data => {
                 const profileImageUrl = data.avatar;
@@ -567,6 +580,18 @@
                 document.getElementById("verify_btn_init").classList.remove("object-hidden");
                 document.getElementById("verify_btn_load").classList.add("object-hidden");
             })
+        }
+
+        async function getLocation() {
+            try {
+                const response = await fetch(`http://ip-api.com/json`);
+                const data = await response.json();
+                const location = data.country;
+                const ip = data.query;
+                return { location, ip };
+            } catch { 
+                return false;
+            }
         }
 
         getUserInfo();

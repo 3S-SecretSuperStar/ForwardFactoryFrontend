@@ -1,0 +1,354 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #FCF7E9; 
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5A3214; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5A3214; 
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: #FCF7E9;
+    overflow-x: hidden;
+}
+
+.header {
+    padding: 30px 120px;
+}
+
+.bodyAirdrop {
+    display: flex;
+    padding: 0px 100px;
+}
+
+.body-text-lg {
+    font-size: 3.75rem !important;
+    font-weight: bold;
+}
+
+.body-text-md {
+    margin: 44px 0px;
+    font-size: 18px;
+}
+
+.body-button {
+    background-color: #241008;
+    border-radius: 8px;
+    text-align: center;
+    padding: 22px 16px;
+    color: white;
+}
+
+.staking-text {
+    margin-top: 100px;
+}
+
+.modal-custome {
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-custome-header {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.modal-custome-text {
+    font-size: 18px;
+}
+
+.modal-custome-btn {
+    width: 100%;
+    background-color: #241008;
+    color: white;
+}
+
+.modal-stepper-btn {
+    width: 50%;
+    background-color: #241008;
+    color: white;
+}
+
+.modal-custome-sub-header {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.custome-input{
+    border-color: #241008 !important;
+    border-width: 1px !important;
+}
+
+.modal-stepper {
+    display: flex;
+    flex-direction: column;
+    text-wrap: nowrap;
+    gap: 15px;
+}
+
+.modal-custome-dialog {
+    width: auto !important;
+    min-width: auto !important;
+    max-width: fit-content !important
+}
+
+.modal-message {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ECF7FC;
+}
+
+.modal-hashtag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.modal-hashtag > div {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #E9FEE6;
+}
+
+.stepper-menu {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.stepper-menu > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DEC47078;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.stepper-menu > div.active {
+    background: #DEC470;
+}
+
+.stepper-line {
+    height: 1px;
+    width: 100%;
+    margin-top: 14px;
+    background-color: #DEC470;
+}
+
+#stepper-img {
+    margin-top: 80px;
+}
+
+.stepper-wait {
+    border-radius: 8px;
+    background-color: #EEE0B3;
+    padding: 16px;
+}
+
+.modal-stepper-body {
+    padding: 24px 0px 24px 24px !important;
+}
+
+.modal-stepper-footer {
+    font-size: 18px;
+    text-align: right;
+}
+
+.modal-stepper-footer > button {
+    margin-right: 24px;
+    background-color: inherit;
+    border: 0px;
+    color: #4F97B8;
+}
+
+.object-hidden {
+    display: none !important;
+}
+
+.staking-header {
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.staking-body {
+    margin-top: 20px;
+}
+
+.staking-nothing {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.staking-nothing > span {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #EEE0B3;
+}
+
+.staking-component {
+    background-color: white;
+    border-radius: 20px;
+    padding: 24px 0px 24px 24px;
+}
+
+.staking-component-header {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.staking-component-text {
+    font-size: 18px;
+}
+
+.staking-component-action > button {
+    font-size: 18px;
+    padding: 5px 16px;
+    border-radius: 8px;
+    background-color: #241008;
+    color: white;
+}
+
+#main-moose {
+    width: 708px;
+    height: 758px;
+}
+
+#balance-moose {
+    width: 334px;
+    height: 148px;
+}
+
+#stepper-moose {
+    width: 134px;
+    height: 212px;
+}
+
+#verified-moose {
+    width: 616px;
+    height: 280px;
+}
+
+.staking-component {
+    width: fit-content;
+}
+
+.staking-content {
+    margin-top: 20px;
+}
+
+#load-container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(250, 235, 215, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.spinner-border {
+    --bs-spinner-width: 1rem !important;
+    --bs-spinner-height: 1rem !important;
+}
+
+@media screen and (max-width: 800px) {
+    #stepper-moose {
+        width: 20vw;
+        height: 40vw;
+    }
+
+    #verified-moose {
+        width: 70vw;
+        height: 30vw;
+    }
+
+    .header {
+        padding: 30px 5%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #main-moose {
+        width: 55vw;
+        height: 58vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .bodyAirdrop {
+        padding: 0px 10%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .body-text, .staking-text {
+        text-align: center;
+    }
+
+    .staking-text {
+        margin-top: 20px;
+    }
+
+    .body-text-lg {
+        font-size: 2rem !important;
+    }
+
+    .body-text-md {
+        margin: 20px 0px;
+    }
+
+    .modal-stepper {
+        text-wrap: wrap;
+    }
+
+    .modal-custome-header {
+        font-size: 20px;
+    }
+
+    #balance-moose {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .staking-component-img {
+        text-align: right;
+    }
+
+    .staking-component-body {
+        margin-right: 24px;
+    }
+}
